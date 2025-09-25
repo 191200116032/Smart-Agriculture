@@ -1,5 +1,5 @@
-def print_hi(name):
-    print(f'Hi, {name}')
+from core.models import train_and_save_model
 
-if __name__ == '__main__':
-    print_hi('Dhruvi ✨')
+if __name__ == "__main__":
+    train_and_save_model()
+    print("Model training completed. Run `streamlit run ui/app.py` to launch the UI.")
