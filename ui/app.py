@@ -30,7 +30,7 @@ if st.button("🌱 Recommend Crop", use_container_width=True):
     crop = service.recommend_crop(N, P, K, temperature, humidity, ph, rainfall)
     st.success(f"✅ Recommended Crop: **{crop.capitalize()}**")
     st.plotly_chart(px.bar(
-        x=["N","P","K","Temp","Humidity","pH","Rainfall"],
-        y=[N,P,K,temperature,humidity,ph,rainfall],
+        x=["N", "P", "K", "Temp", "Humidity", "pH", "Rainfall"],
+        y=[N, P, K, temperature, humidity, ph, rainfall],
         title="Your Farm Condition Overview"
     ), use_container_width=True)

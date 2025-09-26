@@ -5,12 +5,13 @@
 
 ## Model Information
 
-The model is already trained and saved at: `core/saved_model.pkl`
+The crop recommendation model is trained and saved at: `models/crop_recommendation_saved_model.pkl`
 
 To retrain and save the model again, run `main.py`:
-```python
-train_and_save_model()
+```bash
+python main.py
 ```
+This will re-train the model using the dataset at `dataset/crop_recommendation/crop_recommendation.csv` and save the new model in the `models/` directory.
 
 ## Running the Application
 
@@ -19,7 +20,7 @@ train_and_save_model()
    pip install -r requirements.txt
    ```
 
-2. Run the app:
+2. Run the Streamlit app:
    ```bash
    streamlit run ui/app.py
    ```
