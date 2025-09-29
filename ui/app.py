@@ -115,23 +115,23 @@ with tabs[2]:
     st.header("🩺 Crop Disease Detection")
     st.write("Upload a leaf image to detect crop diseases automatically.")
 
-    # Load cached model
-    disease_service = CropDiseaseDetectionService()
-
-    # Upload image
-    uploaded_file = st.file_uploader("📤 Upload Leaf Image", type=["jpg", "jpeg", "png"])
-
-    if uploaded_file:
-        result = disease_service.predict_disease(uploaded_file)
-
-        # Replace class indices with meaningful class names
-        class_names = [
-            "Cassava Bacterial Blight",
-            "Cassava Brown Streak Disease",
-            "Cassava Green Mite Damage",
-            "Cassava Mosaic Disease",
-            "Healthy"
-        ]
-        predicted_class_name = class_names[int(result['predicted_class'].split()[-1])]
-
-        st.success(f"✅ Predicted Disease: **{predicted_class_name}**")
+    # # Load cached model
+    # disease_service = CropDiseaseDetectionService()
+    #
+    # # Upload image
+    # uploaded_file = st.file_uploader("📤 Upload Leaf Image", type=["jpg", "jpeg", "png"])
+    #
+    # if uploaded_file:
+    #     result = disease_service.predict_disease(uploaded_file)
+    #
+    #     # Replace class indices with meaningful class names
+    #     class_names = [
+    #         "Cassava Bacterial Blight",
+    #         "Cassava Brown Streak Disease",
+    #         "Cassava Green Mite Damage",
+    #         "Cassava Mosaic Disease",
+    #         "Healthy"
+    #     ]
+    #     predicted_class_name = class_names[int(result['predicted_class'].split()[-1])]
+    #
+    #     st.success(f"✅ Predicted Disease: **{predicted_class_name}**")
